@@ -24,6 +24,16 @@
 	font: initial;
 	font-size: 60px;
 }
+
+#page_content h4{
+	font: initial;
+	font-size: 30px;
+}
+
+#page_content h5{
+	font: initial;
+	font-size: 30px;
+}
 	body
 	{
 		margin: 0;
@@ -908,18 +918,22 @@
 			font: initial;
 			font-size: 70px;
 		}
+
 		#page_content h2{
 			font: initial;
 			font-size: 60px;
 		}
+
 		#page_content h3{
 			font: initial;
 			font-size: 40px;
 		}
+
 		#page_content h4{
 			font: initial;
 			font-size: 30px;
 		}
+
 		#page_content h5{
 			font: initial;
 			font-size: 30px;
