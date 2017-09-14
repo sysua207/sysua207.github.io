@@ -1,3 +1,4 @@
-name: Linear
-description: Linear template for Jekyll
+name: A207_Page
+description: About A207
 paginate: 10
+discus_identifier: ysingyang # Add your Disqus identifier

@@ -22,10 +22,10 @@
 	body,input,textarea,select
 	{
 		font-family: 'Roboto', sans-serif;
-		font-size: 11pt;
+		font-size: 12pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #777;
+		color: #555;
 	}
 
 	h1,h2,h3,h4,h5,h6
@@ -59,7 +59,7 @@
 	a
 	{
 		text-decoration: none;
-		color: #80BA8E;
+		color: #1D8938;
 	}
 	
 	a:hover
@@ -256,7 +256,7 @@
 			letter-spacing: 1px;
 			text-transform: uppercase;
 			font-size: 8pt;
-			color: #A2A2A2;
+			color: #373434;
 		}
 		
 		ul.style .first {
