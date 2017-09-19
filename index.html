@@ -10,16 +10,21 @@ layout: default
 				{% include sidebar.html %}
 				<!-- Content -->
 				<div id="main" class = "8u";>
-					<div id="content" class="container">
+					<header>
+						<h2 style="font-size:2.4em; text-align:center">通告栏</h2>
+					</header>
+					<div id="content" class="container" style="background : #EEEEEE">
 						{% for post in site.posts %}
 							{% if post.layout == "notice" %}
 								<div class="row">
 									<section class="10u">
 										<a href="{{ site.prefix }}{{ post.url }}" class="image full"><img src="/assets/{{ post.featured }}" alt=""></a>
 										<header>
-											<h2>{{ post.title }}</h2>
+											<h2 style="font-size:2.4em">{{ post.title }}</h2>
 										</header>
+										<div id="page_content">
 											{{post.content}}
+										</div>
 									</section>
 								</div>
 							{% endif %}

@@ -7,6 +7,7 @@ layout: default
 	<div id="main">
 		<div id="content" class="container">
 			{% for post in site.posts offset: 0 limit: 4 %}
+				<div class="card">
 					<div class="row">
 						<section class="8u -2u">
 							<a href="{{ site.prefix }}{{ post.url }}" class="image full"><img src="/assets/{{ post.featured }}" alt=""></a>
@@ -17,6 +18,7 @@ layout: default
 							<a href="{{ site.prefix }}{{ post.url }}" class="button button-style1">Read More</a>
 						</section>
 					</div>
+				</div>
 			{% endfor %}
 		</div>
 	</div>
