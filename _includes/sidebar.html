@@ -8,43 +8,43 @@
 		<div class="row">
 			<section class="6u">
 				<ul class="default">
-					<li><a href="http://192.168.0.111:8123">Amax服务器(内网)</a></li>
+					<li><a href="http://amax.lan:8123">Amax服务器(内网)</a></li>
 					<li><a href="http://ras.sysu.edu.cn:8123">Amax服务器(公网)</a></li>
-					<li><a href="http://192.168.0.222:8123">Bmax服务器(内网)</a></li>
-					<li><a href="http://amax.lan:10000">Amax管理员</a></li>
-					<li><a href="http://bmax.lan:10000">Bmax管理员</a></li>
+					<li><a href="http://amax.lan:8123">Bmax服务器(内网)</a></li>
+					<li><a href="https://amax.lan:10000">Amax管理员</a></li>
+					<li><a href="https://bmax.lan:10000">Bmax管理员</a></li>
 				</ul>
 			</section>
 			<section class="6u">
 				<ul class="default">
-					<li><a href="http://amax.lan:8280">Git服务器</a></li>
-					<li><a href="http://amax.lan:3691">Svn服务器</a></li>
-					<li><a href="ftp://amax.lan">Ftp服务器</a></li>
-					<li><a href="http://amax.lan:8123">HP打印机</a></li>
-					<li><a href="http://amax.lan:8123">联想打印机</a></li>
+					<li><a href="http://ras.sysu.edu.cn:8280">GIT服务器</a></li>
+					<li><a href="http://ras.sysu.edu.cn:3691">SVN服务器</a></li>
+					<li><a href="ftp://ras.sysu.edu.cn">FTP服务器</a></li>
+					<li><a href="#">HP打印机</a></li>
+					<li><a href="#">联想打印机</a></li>
 				</ul>
 			</section>
 		</div>
 	</section>
 	<section>
 		<header>
-			<h2>常用文档说明</h2>
+			<h2>常用文档</h2>
 		</header>
 		<div class="row">
 			<section class="6u">
-				<ul class="default"> 
-					<li><a href="{{site.prefix }}2017/04/13/Amax使用指南.html">Amax使用指南</a></li>
-				</ul>
-			</section>
-			<section class="6u">
 				<ul class="default">
+					{% for post in site.posts%}
+						{% if post.layout == "post"%}
+							<li><a href="{{ site.prefix }}{{ post.url }}">{{ post.title | remove: '<p>' | remove: '</p>' }}</a></li>
+						{% endif %}
+					{% endfor %}
 				</ul>
 			</section>
 		</div>
 	</section>
 	<section>
 		<header>
-			<h2>Recent Notice Posts</h2>
+			<h2>最近通知</h2>
 		</header>
 		<ul class="style">
 		{% for post in site.posts offset: 0 limit: 2 %}

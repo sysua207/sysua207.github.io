@@ -8,21 +8,21 @@ layout: default
 		<div class="container"  style="max-width:2000px;width:80%">
 			<div class="row">
 				{% include sidebar.html %}
-
 				<!-- Content -->
 				<div id="main" class = "8u";>
 					<div id="content" class="container">
-						{% for post in site.posts offset: 0 limit: 4 %}
-						<div class="row">
-							<section class="10u">
-								<a href="{{ site.prefix }}{{ post.url }}" class="image full"><img src="/assets/{{ post.featured }}" alt=""></a>
-								<header>
-									<h2>{{ post.title }}</h2>
-								</header>
-								{{ post.excerpt }}<br>
-								<a href="{{ site.prefix }}{{ post.url }}" class="button button-style1">Read More</a>
-							</section>
-						</div>
+						{% for post in site.posts %}
+							{% if post.layout == "notice" %}
+								<div class="row">
+									<section class="10u">
+										<a href="{{ site.prefix }}{{ post.url }}" class="image full"><img src="/assets/{{ post.featured }}" alt=""></a>
+										<header>
+											<h2>{{ post.title }}</h2>
+										</header>
+											{{post.content}}
+									</section>
+								</div>
+							{% endif %}
 						{% endfor %}
 					</div>
 				</div>
