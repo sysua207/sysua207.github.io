@@ -53,6 +53,11 @@
 	vertical-align: middle;
 }
 
+#page_content table, th, td {
+    border: 0.05em solid #999999;
+}
+
+
 #page_content table{
 	font: 1em;
 	font-family: 'Roboto', sans-serif;
@@ -62,6 +67,7 @@
 #page_content th {
 	min-width: 10%;
 	padding: 1em;
+	font-weight:bold;
 }
 
 #page_content td {
