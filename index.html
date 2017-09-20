@@ -13,11 +13,11 @@ layout: default
 					<header>
 						<h2 style="font-size:2.4em;">通告栏</h2>
 					</header>
-					<div id="content" class="container" style="background : #EEEEEE">
+					<div id="content" class="container">
 						{% for post in site.posts %}
 							{% if post.layout == "notice" %}
 								<div class="row">
-									<section class="10u">
+									<section class="10u" style="background : #EEEEEE">
 										<a href="{{ site.prefix }}{{ post.url }}" class="image full"><img src="/assets/{{ post.featured }}" alt=""></a>
 										<header>
 											<h2 style="font-size:2.4em">{{ post.title }}</h2>
