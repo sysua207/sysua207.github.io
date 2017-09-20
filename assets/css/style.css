@@ -52,6 +52,21 @@
 	margin: 1.5em auto 1.6em auto;
 	vertical-align: middle;
 }
+
+#page_content table{
+	font: 1em;
+	font-family: 'Roboto', sans-serif;
+	width:100%;
+}
+
+#page_content th {
+	min-width: 10%;
+	padding: 1em;
+}
+
+#page_content td {
+	padding: 1em;
+}
 	body
 	{
 		margin: 0;

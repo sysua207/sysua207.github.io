@@ -2,3 +2,9 @@ name: A207_Page
 description: About A207
 paginate: 10
 discus_identifier: ysingyang # Add your Disqus identifier
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false  
