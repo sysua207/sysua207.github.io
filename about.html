@@ -82,9 +82,12 @@ layout: default
 	</div>
 	<script type="text/javascript">
 		function onRefreshClick(){
-			$.get("/start/",{},function(res){
-				if(res=="succeed"){
-					window.location.reload();
+			$.get("http://192.168.0.111:8123/jekyll/",{},function(res){
+				if(res=="Succeed"){
+					window.location.replace("/");
+				}
+				else{
+					alert("应用更改失败, 请联系管理员");
 				}
 			});
 		}
