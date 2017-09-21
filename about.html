@@ -81,6 +81,10 @@ layout: default
 		</div>
 	</div>
 	<script type="text/javascript">
+		function sleep(ms) {
+  			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+
 		function onRefreshClick(){
 			/*$.get("http://192.168.0.111:8123/jekyll/",{},function(res){
 				console.log(res);
@@ -91,13 +95,15 @@ layout: default
 					alert("应用更改失败, 请联系管理员");
 				}
 			});*/
-
+			
 			$.ajax({
 				url: "http://192.168.0.111:8123/jekyll/",
 				type: "get",
 				crossDomain: true,
 				success: function (response) {
-					window.location.replace("/");
+					sleep(1000).then(()=>{
+							window.location.replace("/");
+					})
 				},
 				error: function (xhr, status) {
 					alert("应用更改失败, 请联系管理员");

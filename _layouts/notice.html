@@ -3,7 +3,8 @@ layout: default
 ---
 <!-- Main -->
 	<div id="main">
-		<div id="content" class="container">
+		<div id="content">
+			<div id="index" class="container">
 			<div class="row">
 				<section class="12u">
 					<a href="{{ site.prefix }}{{ page.url }}" class="image full"><img src="/assets/{{ page.featured }}" alt=""></a>
@@ -14,6 +15,7 @@ layout: default
 						{{ page.content }}
 					</content>
 				</section>
+			</div>
 			</div>
 			<div style="margin-top:20px;">
 				{% if site.discus_identifier %}

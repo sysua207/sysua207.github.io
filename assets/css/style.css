@@ -70,6 +70,17 @@
 	font-weight:bold;
 }
 
+#main.container{
+	width : 100%;
+}
+
+#index.container {
+    width: 100%;
+}
+#index.row{
+	margin-left: 0px;
+}
+
 #page_content td {
 	padding: 1em;
 }
