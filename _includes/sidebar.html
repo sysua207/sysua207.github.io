@@ -47,11 +47,13 @@
 			<h2>最近通知</h2>
 		</header>
 		<ul class="style">
-		{% for post in site.posts offset: 0 limit: 2 %}
-			<li>
-				<p class="posted">{{ post.date | date_to_string }}  |  (10 )  Comments</p>
-				<p><a href="{{ site.prefix }}{{ post.url }}">{{ post.title | remove: '<p>' | remove: '</p>' }}</a></p>
-			</li>
+		{% for post in site.posts offset: 0 limit: 10 %}
+			{% if post.layout == "notice" %}
+				<li>
+					<p class="posted">{{ post.date | date_to_string }}  |  (10 )  Comments</p>
+					<p><a href="{{ site.prefix }}{{ post.url }}">{{ post.title | remove: '<p>' | remove: '</p>' }}</a></p>
+				</li>
+			{% endif %}
 		{% endfor %}
 		</ul>
 	</section>
